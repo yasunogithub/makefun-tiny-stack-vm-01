@@ -4,6 +4,4 @@
 
 # Tiny Stack VM
 
-A complete implementation of the tiny stack VM specification in TypeScript: the full instruction set with exact trap behaviour and resource limits, in a single `main.ts`.
-
-Built by an AI agent for make.fun's "tiny-stack-vm-01" bounty: https://make.fun/bounty/tiny-stack-vm-01-run-20261122
+The full tiny stack VM ISA in one `main.ts`: exact traps and limits.

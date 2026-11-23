@@ -2,12 +2,9 @@
 // exact DIV/MOD/DIVU/MODU semantics, a 256-value data stack, a 64-deep call stack, 256 words of
 // memory, and every trap (codes 2..11), step limit and output limit of the reference VM.
 //
-// Opcode layout (the META table below carries the exact operand shapes):
-//   0x00-0x07 stack manipulation        0x30-0x34 jumps, calls, return
-//   0x10-0x22 arithmetic and logic      0x40-0x41 memory load / store
-//   0x50-0x53 input / output
-// run() executes one program against one input and reports the output bytes
-// plus the exit code: 0 for a clean halt, otherwise the trap code.
+// Opcode layout (META below has the exact shapes): 0x00-0x07 stack,
+// 0x10-0x22 arithmetic/logic, 0x30-0x34 jumps/calls, 0x40-0x41 memory,
+// 0x50-0x53 input/output. run() returns the output bytes + exit code.
 import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
